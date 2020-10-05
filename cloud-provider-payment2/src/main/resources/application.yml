@@ -17,6 +17,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka-server1.com:7001/eureka/,http://eureka-server2.com:7002/eureka/
+  instance:
+    instance-id: payment2
+    prefer-ip-address: true
 
 mybatis:
   mapperLocations: classpath*:mapper/*.xml
