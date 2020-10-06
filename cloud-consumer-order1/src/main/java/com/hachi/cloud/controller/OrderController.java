@@ -4,6 +4,7 @@ import com.hachi.cloud.entity.CommonResult;
 import com.hachi.cloud.entity.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,5 +33,15 @@ public class OrderController {
     @GetMapping("/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
         return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
+    }
+
+    @GetMapping("/payment/getForEntity/{id}")
+    public CommonResult<Payment> getPayment2(@PathVariable("id") Long id) {
+        ResponseEntity<CommonResult> result = restTemplate.getForEntity(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
+        if (result.getStatusCode().is2xxSuccessful()) {
+            return result.getBody();
+        } else {
+            return new CommonResult<>(444, "操作失败");
+        }
     }
 }
