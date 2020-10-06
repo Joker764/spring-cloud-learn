@@ -1,0 +1,9 @@
+server:
+  port: 8802
+
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    zookeeper:
+      connect-string: 172.17.0.3:2181
