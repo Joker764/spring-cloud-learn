@@ -16,6 +16,7 @@
     <module>cloud-provider-payment2</module>
     <module>cloud-provider-payment4</module>
     <module>cloud-consumer-order2</module>
+    <module>cloud-provider-payment6</module>
   </modules>
   <packaging>pom</packaging>
 
