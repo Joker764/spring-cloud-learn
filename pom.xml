@@ -18,6 +18,7 @@
     <module>cloud-consumer-order2</module>
     <module>cloud-provider-payment6</module>
     <module>cloud-consumer-order3</module>
+    <module>cloud-consumer-feign-order</module>
   </modules>
   <packaging>pom</packaging>
 
