@@ -1,12 +1,10 @@
-package com.hachi.cloud.server.impl;
+package com.hachi.cloud.service.impl;
 
 import com.hachi.cloud.dao.PaymentDao;
 import com.hachi.cloud.entity.Payment;
-import com.hachi.cloud.server.PaymentService;
+import com.hachi.cloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @author hachi

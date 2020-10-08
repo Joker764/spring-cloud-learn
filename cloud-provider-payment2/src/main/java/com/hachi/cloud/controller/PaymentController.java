@@ -1,6 +1,6 @@
 package com.hachi.cloud.controller;
 
-import com.hachi.cloud.server.PaymentService;
+import com.hachi.cloud.service.PaymentService;
 import com.hachi.cloud.entity.CommonResult;
 import com.hachi.cloud.entity.Payment;
 import lombok.extern.slf4j.Slf4j;

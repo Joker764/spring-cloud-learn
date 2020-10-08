@@ -1,4 +1,4 @@
-package com.hachi.cloud.server;
+package com.hachi.cloud.service;
 
 import com.hachi.cloud.entity.Payment;
 import org.apache.ibatis.annotations.Param;
