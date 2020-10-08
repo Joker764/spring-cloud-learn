@@ -10,6 +10,8 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author hachi
  * @date 10/3/20 2:52 PM
@@ -65,6 +67,16 @@ public class PaymentController {
 
     @GetMapping("/lb")
     public String getPaymentLB() {
+        return serverPort;
+    }
+
+    @GetMapping("/timeout")
+    public String paymentTimeOut() {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return serverPort;
     }
 }
