@@ -18,6 +18,8 @@ spring:
           uri: lb://cloud-payment-service
           predicates:
             - Path=/payment/lb/**
+            - After=2020-11-17T22:49:22.635617500+08:00[Asia/Shanghai]
+            - Cookie=username,hachi
 
 eureka:
   instance:
